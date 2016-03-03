@@ -1,0 +1,1 @@
+Store files in here to return from the rest service. All must end in txt.
