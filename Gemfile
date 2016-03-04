@@ -1,16 +1,19 @@
 source 'https://rubygems.org'
 
-	gem 'sinatra'
-	gem 'json'
+gem 'sinatra'
+gem 'json'
 
-	# for dev
-	gem 'rake'
-	gem 'rubocop'
+group :dev do
+  gem 'rake'
+  gem 'rubocop'
+end
 
-	#for test
-	gem 'fig_newton'
-	gem 'cucumber'
-	gem 'rspec'
-	gem 'rest_baby'
+group :test do
+  gem 'cuke_sniffer'
+  gem 'poltergeist'
+  gem 'cucumber'
+  gem 'rspec'
+  gem 'rack-test'
   gem 'coveralls'
   gem 'simplecov'
+end
