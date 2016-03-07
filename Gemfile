@@ -14,6 +14,7 @@ group :test do
   gem 'cucumber'
   gem 'rspec'
   gem 'rack-test'
+  gem 'capybara'
   gem 'coveralls'
   gem 'simplecov'
 end
