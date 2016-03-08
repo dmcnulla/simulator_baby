@@ -1,0 +1,8 @@
+ChangeLog
+=== Version 1.0 / 2016-03-07
+* Basic implementation of simulator_baby for use in my services that call other restful services
+* Supports POST to insist on responses from future GET requests
+* Supports GET of previously posted data
+* Supports GET of  data that is stored in files.
+* All cukes
+* Code coverage and automated test system

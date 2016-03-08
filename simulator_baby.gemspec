@@ -1,8 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'version/version'
 
 Gem::Specification.new do |spec|
+  spec.version       = SimulatorBaby::VERSION
   spec.name          = 'simulator_baby'
   spec.version       = '1.0'
   spec.authors       = ['Dave McNulla']
