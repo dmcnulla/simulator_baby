@@ -1,6 +1,6 @@
 # simulator_baby
 
-Small rest simulator service, supports ruby-2.0.0, ruby-2.1.0, ruby-2.2.0, jruby (based 1.9).
+Small rest simulator service, supports ruby-2.0.0, ruby-2.1.0, ruby-2.2.0, jruby-9.
 
 ## Status 
 [![Build Status](https://travis-ci.org/dmcnulla/simulator_baby.svg?branch=master)](https://travis-ci.org/dmcnulla/simulator_baby)
