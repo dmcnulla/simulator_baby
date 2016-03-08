@@ -1,5 +1,3 @@
-require File.expand_path(File.join(File.dirname(__FILE__), '../../lib/rest_data.rb'))
-require File.expand_path(File.join(File.dirname(__FILE__), '../../lib/main.rb'))
 require 'rack/test'
 require 'capybara'
 require 'capybara/cucumber'
@@ -11,14 +9,16 @@ require 'coveralls'
 require 'simplecov'
 require 'sinatra'
 
-coverarray = [SimpleCov::Formatter::HTMLFormatter, Coveralls::SimpleCov::Formatter]
-SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new(coverarray)
-
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
+  SimpleCov::Formatter::HTMLFormatter,
+  Coveralls::SimpleCov::Formatter
+]
 SimpleCov.start do
   add_filter 'features'
 end
 
-Coveralls.wear!
+require File.expand_path(File.join(File.dirname(__FILE__), '../../lib/rest_data.rb'))
+require File.expand_path(File.join(File.dirname(__FILE__), '../../lib/main.rb'))
 
 Capybara.default_driver = :poltergeist
 Capybara.register_driver :poltergeist do |app|
