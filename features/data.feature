@@ -27,4 +27,3 @@ Scenario: I get no data because nothing matches
   Given I have nothing
   When I request nothing
   Then I get nothing
-  
