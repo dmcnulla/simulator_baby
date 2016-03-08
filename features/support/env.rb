@@ -1,8 +1,8 @@
 require File.expand_path(File.join(File.dirname(__FILE__), '../../lib/rest_data.rb'))
 require File.expand_path(File.join(File.dirname(__FILE__), '../../lib/main.rb'))
 require 'rack/test'
-require 'Capybara'
-require 'Capybara/cucumber'
+require 'capybara'
+require 'capybara/cucumber'
 require 'rspec'
 require 'capybara/poltergeist'
 require 'rspec/expectations'
