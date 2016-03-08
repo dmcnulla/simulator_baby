@@ -18,6 +18,8 @@ SimpleCov.start do
   add_filter 'features'
 end
 
+Coveralls.wear!
+
 Capybara.default_driver = :poltergeist
 Capybara.register_driver :poltergeist do |app|
   options = {
