@@ -1,5 +1,5 @@
 Given(/^I have data storage$/) do
-  @temp = RestData.new('temp_storage')
+  temp_storage
 end
 
 When(/^I add data as a "([^"]*)" \/ "([^"]*)" pair$/) do |key, value|
@@ -13,4 +13,20 @@ end
 Then(/^I can get data has the "([^"]*)" \/ "([^"]*)" pair$/) do |key, value|
   actual_data = @temp.get(key)
   expect(actual_data).to eq(value)
+end
+
+Given(/^I have nothing$/) do
+  temp_storage
+end
+
+When(/^I request nothing$/) do
+  @actual_data = @temp.get('nothing')
+end
+
+Then(/^I get nothing$/) do
+  expect(@actual_data).to eq('')
+end
+
+def temp_storage
+  @temp = RestData.new('temp_storage')
 end

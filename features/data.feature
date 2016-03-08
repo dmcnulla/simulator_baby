@@ -21,3 +21,10 @@ Scenario Outline: I get data from a file
 Examples: 
   | name | contents                                |
   | temp | One fish, two fish, red fish, blue fish |
+
+@data.nomatch
+Scenario: I get no data because nothing matches
+  Given I have nothing
+  When I request nothing
+  Then I get nothing
+  
