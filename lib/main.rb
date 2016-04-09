@@ -11,4 +11,8 @@ class Simulator < Sinatra::Base
   post '/:path' do
     [204, {}, Simulator.data.add(params[:path], request.body.read.to_s)]
   end
+
+  delete '/:path' do
+    [204, {}, Simulator.data.delete(params[:path])]
+  end
 end

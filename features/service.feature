@@ -2,7 +2,7 @@
 
 Feature: As a tester, I want to create request data replies in order to test my client's behavior on those replies.
 
-Background: 
+Background:
   Given I have a rest service
 
 @service.set
@@ -20,6 +20,16 @@ Scenario Outline: Request a service reply from a preset file
   When I have a file "<name>" with "<contents>"
   And I send a GET to "<name>"
   Then I receive "<contents>"
-Examples: 
+Examples:
   | name | contents                                |
   | temp | One fish, two fish, red fish, blue fish |
+
+@service.delete
+Scenario Outline: Delete a service reply
+  And I have a GET for "<response>" from "<path>"
+  When I request to DELETE the response for "<path>"
+  And I send a GET to "<path>"
+  Then I receive ""
+Examples:
+  | path   | response                        |
+  | /test1 | col1,col1\nr1c1,r1c2\nr2c1,r2c2 |
