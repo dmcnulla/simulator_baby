@@ -140,11 +140,11 @@ DEPENDENCIES
   poltergeist (~> 1.9)
   rack-test (~> 0.6)
   rake (~> 11.1.2)
-  rspec (~> 2.14, >= 2.14.1)
+  rspec (~> 2.99.0)
   rubocop (~> 0.37)
   simplecov (~> 0.11)
   simulator_baby!
-  webmock (~> 1.13, >= 1.13.0)
+  webmock (~> 1.24.2)
 
 BUNDLED WITH
    1.11.2
