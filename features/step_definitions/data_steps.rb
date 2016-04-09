@@ -27,6 +27,18 @@ Then(/^I get nothing$/) do
   expect(@actual_data).to eq('')
 end
 
+Given(/^I have data as a "([^"]*)" \/ "([^"]*)" pair$/) do |key, value|
+  @temp.add(key, value)
+end
+
+When(/^I delete the key "([^"]*)"$/) do |key|
+  @temp.delete(key)
+end
+
+Then(/^I cannot get data from "([^"]*)"$/) do |key|
+  expect(@temp.get(key)).to eq("")
+end
+
 def temp_storage
   @temp = RestData.new('temp_storage')
 end

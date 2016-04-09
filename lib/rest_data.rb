@@ -15,4 +15,8 @@ class RestData
     return File.read(file) if File.exist?(file)
     ''
   end
+
+  def delete(path)
+    @storage.delete(path)
+  end
 end
