@@ -8,6 +8,9 @@ Small rest simulator service, supports ruby-2.0.0, ruby-2.1.0, ruby-2.2.0, jruby
 ## Coverage
 [![Coverage Status](https://coveralls.io/repos/dmcnulla/simulator_baby/badge.svg?branch=master&service=github)](https://coveralls.io/github/dmcnulla/simulator_baby?branch=master)
 
+## Code Analysis
+[![Code Climate](https://codeclimate.com/github/dmcnulla/simulator_baby/badges/gpa.svg)](https://codeclimate.com/github/dmcnulla/simulator_baby)
+
 ## Installation
 
 Add this line to your application's Gemfile:
